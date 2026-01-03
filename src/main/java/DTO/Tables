@@ -1,0 +1,61 @@
+
+1.User:
+
+username(email)
+userID(autoGen)
+Password
+roleid
+name
+email
+phoneNumber
+
+2.Projects: @oneToMany for User
+project name
+project ID
+location
+status
+image
+lead(username) FR key
+Assignee(username) FR key
+
+3.Site data
+site id
+images
+project id FR key
+
+4.Raw material bill
+raw id
+site id FR key
+material id
+material quantity
+material total amount
+
+
+5.RA Bill
+site id FR key
+raw id FR key
+approved by
+total amount
+
+
+
+
+6.materials
+material id
+
+material name
+material rate
+
+7.Roll
+rollid
+role name
+rank
+
+8.Approvals
+approval id
+RA bill id FR key
+
+
+
+
+
