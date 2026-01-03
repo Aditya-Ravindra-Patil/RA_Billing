@@ -4,7 +4,7 @@
 username(email)
 userID(autoGen)
 Password
-role id
+roleid
 name
 email
 phoneNumber
@@ -54,8 +54,3 @@ rank
 8.Approvals
 approval id
 RA bill id FR key
-
-
-
-
-
