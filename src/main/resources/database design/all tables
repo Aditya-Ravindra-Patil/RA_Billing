@@ -23,7 +23,7 @@ site id
 images
 project id FR key
 
-4.Raw material bill
+4.Item bill
 raw id
 site id FR key
 material id
@@ -33,7 +33,7 @@ material total amount
 
 5.RA Bill
 site id FR key
-raw id FR key
+item bill id FR key
 approved by
 total amount
 

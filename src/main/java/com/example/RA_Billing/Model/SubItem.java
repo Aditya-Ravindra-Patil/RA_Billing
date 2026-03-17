@@ -13,27 +13,25 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Project_Items {
+public class SubItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String itemNo;
+    private String subItemNo;
 
     private String description;
 
     private String unit;
 
-    private Double tenderRate;
+    private Double rate;
 
     @ManyToOne
     @JsonBackReference
-    private Stage stage;
+    private Project_Items item;
 
-    @OneToMany(mappedBy = "item")
+    @OneToMany(mappedBy = "subItem")
     @JsonManagedReference
-    private List<SubItem> subItems;
+    private List<MeasurementBookLog> measurements;
 }
-
-

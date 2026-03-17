@@ -1,5 +1,6 @@
 package com.example.RA_Billing.ServicesImpl;
 
+import com.example.RA_Billing.DTO.CreateProjectDto;
 import com.example.RA_Billing.Model.Project;
 import com.example.RA_Billing.Repo.ProjectRepository;
 import com.example.RA_Billing.Services.ProjectService;
@@ -18,8 +19,12 @@ public class ProjectServiceImpl implements ProjectService {
         return repository.findAll();
     }
 
-    public Project saveProject(Project project){
-        return repository.save(project);
+    public Project saveProject(CreateProjectDto createProjectDto){
+
+//        Project project=createProjectDto.building();
+
+        return repository.save(createProjectDto.building());
+
     }
 
     public void deleteProject(Long id){
