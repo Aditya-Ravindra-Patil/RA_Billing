@@ -1,6 +1,7 @@
 package com.example.RA_Billing.Model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -13,27 +14,23 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Project_Items {
+public class Stage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String itemNo;
+    private String stageName;
 
-    private String description;
+    private Integer stageNo;
 
-    private String unit;
-
-    private Double tenderRate;
+    private String raBillNo;
 
     @ManyToOne
     @JsonBackReference
-    private Stage stage;
+    private Project project;
 
-    @OneToMany(mappedBy = "item")
+    @OneToMany(mappedBy = "stage")
     @JsonManagedReference
-    private List<SubItem> subItems;
+    private List<Project_Items> items;
 }
-
-

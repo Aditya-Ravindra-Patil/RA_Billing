@@ -1,5 +1,6 @@
 package com.example.RA_Billing.Controller;
 
+import com.example.RA_Billing.DTO.CreateProjectDto;
 import com.example.RA_Billing.Model.Project;
 import com.example.RA_Billing.Services.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +22,8 @@ public class ProjectController {
     }
 
     @PostMapping
-    public Project createProject(@RequestBody Project project){
-        return service.saveProject(project);
+    public Project createProject(@RequestBody CreateProjectDto createProjectDto){
+        return service.saveProject(createProjectDto);
     }
 
     @DeleteMapping("/{id}")
